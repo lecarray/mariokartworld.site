@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Mario Kart World</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 404页面特定样式 */
+        body {
+            background-color: #4a86e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .error-container {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .error-title {
+            font-size: 100px;
+            color: #e01e1e;
+            font-weight: bold;
+            line-height: 1;
+            margin: 0 0 10px;
+        }
+        
+        .game-over {
+            font-size: 32px;
+            color: #e01e1e;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        .error-message {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .error-description {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        
+        .home-button {
+            background-color: #e01e1e;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 0 #a00000;
+        }
+        
+        .home-button:hover {
+            background-color: #c00000;
+            transform: translateY(-3px);
+            box-shadow: 0 7px 0 #a00000;
+        }
+        
+        .home-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 0 #a00000;
+        }
+        
+        .home-button i {
+            margin-right: 5px;
+        }
+    </style>
+    <!-- 字体图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-title">404</div>
+        <div class="game-over" data-lang-404-gameover>GAME OVER</div>
+        <h1 class="error-message" data-lang-404-title>Page Not Found!</h1>
+        <p class="error-description" data-lang-404-message>Oops! Looks like Mario jumped to another castle.<br>The page you're looking for doesn't exist.</p>
+        <a href="index.html" class="home-button"><i class="fas fa-arrow-right"></i> <span data-lang-404-continue>Continue → World 1-1</span></a>
+    </div>
+
+    <!-- 多语言支持 -->
+    <script src="js/language.js"></script>
+</body>
+</html> 

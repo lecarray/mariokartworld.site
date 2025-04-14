@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Kart World</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 字体图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Mario Kart World Logo">
+            <h1>Mario Kart World</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" class="lang-home">Home</a></li>
+                <li><a href="#games" class="lang-games">Games</a></li>
+                <li><a href="#characters" class="lang-characters">Characters</a></li>
+                <li><a href="#news" class="lang-news">News</a></li>
+            </ul>
+            <!-- 语言选择按钮 -->
+            <div class="language-selector">
+                <button id="language-btn">
+                    <i class="fas fa-globe"></i>
+                    <span class="current-lang">EN</span>
+                </button>
+                <div class="language-dropdown">
+                    <a href="#" data-lang="en">English</a>
+                    <a href="#" data-lang="zh">中文</a>
+                </div>
+            </div>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="lang-hero-title">Welcome to Mario Kart World!</h2>
+            <p class="lang-hero-desc">Play your favorite Mario games online for free!</p>
+            <a href="https://jcw87.github.io/c2-smb1/" class="btn lang-play-now" target="_blank">Play Now</a>
+        </div>
+    </section>
+
+    <!-- 游戏区域 -->
+    <section id="games" class="games-section">
+        <h2 class="section-title lang-games-title">Featured Games</h2>
+        <div class="games-container">
+            <div class="game-card">
+                <div class="game-thumbnail">
+                    <img src="images/game1.jpg" alt="Super Mario Bros">
+                </div>
+                <h3>Super Mario Bros</h3>
+                <p class="lang-game1-desc">Classic platformer adventure!</p>
+                <button class="play-btn lang-play-game" data-game="https://jcw87.github.io/c2-smb1/">Play Game</button>
+            </div>
+            <div class="game-card">
+                <div class="game-thumbnail">
+                    <img src="images/game2.jpg" alt="Mario Kart">
+                </div>
+                <h3>Mario Kart</h3>
+                <p class="lang-game2-desc">Race with Mario and friends!</p>
+                <button class="play-btn lang-play-game" data-game="game2.html">Play Game</button>
+            </div>
+            <div class="game-card">
+                <div class="game-thumbnail">
+                    <img src="images/game3.jpg" alt="Mario Party">
+                </div>
+                <h3>Mario Party</h3>
+                <p class="lang-game3-desc">Fun mini-games with friends!</p>
+                <button class="play-btn lang-play-game" data-game="game3.html">Play Game</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏展示区 (iframe) -->
+    <section id="game-display" class="game-display hidden">
+        <div class="game-container">
+            <div class="game-header">
+                <h3 id="current-game-title">Game Title</h3>
+                <button id="close-game"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="iframe-container">
+                <iframe id="game-iframe" src="" frameborder="0" allowfullscreen></iframe>
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p class="lang-loading">Loading...</p>
+                </div>
+            </div>
+            <div class="game-controls">
+                <button id="fullscreen-btn"><i class="fas fa-expand"></i> <span class="lang-fullscreen">Fullscreen</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 角色区域 -->
+    <section id="characters" class="characters-section">
+        <h2 class="section-title lang-characters-title">Meet the Characters</h2>
+        <div class="characters-container">
+            <div class="character-card">
+                <img src="images/characters/mario.png" alt="Mario">
+                <h3>Mario</h3>
+                <p class="lang-mario-desc">The main hero of Mushroom Kingdom!</p>
+            </div>
+            <div class="character-card">
+                <img src="images/characters/luigi.png" alt="Luigi">
+                <h3>Luigi</h3>
+                <p class="lang-luigi-desc">Mario's brother and loyal sidekick!</p>
+            </div>
+            <div class="character-card">
+                <img src="images/characters/peach.png" alt="Princess Peach">
+                <h3>Princess Peach</h3>
+                <p class="lang-peach-desc">The princess of Mushroom Kingdom!</p>
+            </div>
+            <div class="character-card">
+                <img src="images/characters/bowser.png" alt="Bowser">
+                <h3>Bowser</h3>
+                <p class="lang-bowser-desc">The King of Koopas and Mario's arch-enemy!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻区域 -->
+    <section id="news" class="news-section">
+        <h2 class="section-title lang-news-title">Latest News</h2>
+        <div class="news-container">
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="images/news1.jpg" alt="News 1">
+                </div>
+                <div class="news-content">
+                    <h3 class="lang-news1-title">Nintendo Announces Princess Peach: Showtime! Release</h3>
+                    <p class="news-date">March 22, 2024</p>
+                    <p class="news-excerpt lang-news1-excerpt">Nintendo has released Princess Peach: Showtime! for Nintendo Switch, the first game to star Princess Peach as the main protagonist since 2005...</p>
+                    <a href="#" class="read-more lang-read-more">Read More</a>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="images/news2.jpg" alt="News 2">
+                </div>
+                <div class="news-content">
+                    <h3 class="lang-news2-title">Second Mario Movie Confirmed by Nintendo</h3>
+                    <p class="news-date">April 2, 2024</p>
+                    <p class="news-excerpt lang-news2-excerpt">Nintendo and Illumination have officially confirmed that a sequel to The Super Mario Bros. Movie is in production with a planned release in 2026...</p>
+                    <a href="#" class="read-more lang-read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo-small.png" alt="Mario Kart World">
+                <p>Mario Kart World</p>
+            </div>
+            <div class="footer-links">
+                <h3 class="lang-quick-links">Quick Links</h3>
+                <ul>
+                    <li><a href="#" class="lang-home">Home</a></li>
+                    <li><a href="#games" class="lang-games">Games</a></li>
+                    <li><a href="#characters" class="lang-characters">Characters</a></li>
+                    <li><a href="#news" class="lang-news">News</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3 class="lang-newsletter">Newsletter</h3>
+                <p class="lang-newsletter-desc">Subscribe for updates and new game releases!</p>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="lang-subscribe">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="lang-copyright">© 2023 Mario Kart World. All characters and game titles are property of Nintendo. This is a fan-made website.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html> 
